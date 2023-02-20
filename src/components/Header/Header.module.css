@@ -1,0 +1,60 @@
+/*.HeaderFather{*/
+/*    position: fixed;*/
+/*    transition: 500ms;*/
+/*}*/
+.Header{
+    width: 100px;
+    height: 100vh;
+    background: #202427;
+    color: #636468;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    z-index: +2;
+
+}
+
+
+
+.Icons {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px 0 25px 0;
+    transition: 500ms;
+
+}
+
+.top_icons {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+a {
+    color: #66686c;
+    font-size: 25px;
+    margin: 25px;
+    text-decoration: none;
+}
+
+a[class='active']{
+    width: 60px;
+    height: 60px;
+    color: aliceblue;
+    border-radius: 10px;
+    background: #292d32;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dayNightSwitcher{
+    margin-top: 20px;
+}

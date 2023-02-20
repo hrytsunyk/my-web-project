@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#dark{
+  background: #1e2224;
+  color: aliceblue;
+  transition: 500ms;
+
+}
+#light{
+  background: #ffffff;
+transition: 500ms;
+}
+
+
+#light .Header{
+  background: #a8a8a8;
+  transition: 500ms;
+}
+

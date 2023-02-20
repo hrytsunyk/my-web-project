@@ -1,0 +1,21 @@
+.BaseLayout {
+    width: 100%;
+
+}
+
+.switch {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    z-index: +2;
+    top: 0px;
+    left: 0;
+}
+
+.toggle {
+    z-index: +3;
+    margin-right: 50px;
+}
