@@ -7,6 +7,7 @@ import {MoviesListCard} from "../PosterPreview/PosterPreview";
 import {movieActions} from "../../redux/slices/movieSlice";
 import css from './MoviesList.module.css';
 import DayNightToggle from "react-day-and-night-toggle";
+import {GenreBadges} from "../GenreBadge/GenreBadges";
 
 
 
@@ -32,7 +33,7 @@ const MoviesList = () => {
 
     return (
         <div className={css.MoviesListFather}>
-            {/*<GenreBadge/>*/}
+
             <div className={css.MoviesList}>
                 {movies.map((movie, index) => <MoviesListCard key={index} movie={movie}/>)}
             </div>

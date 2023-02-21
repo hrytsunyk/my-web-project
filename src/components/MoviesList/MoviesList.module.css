@@ -3,8 +3,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 30px 0 50px 100px;
-    /*padding: 30px;*/
+    /*margin: 30px 0 0 100px;*/
+
 }
 
 .MoviesList {
@@ -13,6 +13,7 @@
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+    z-index: 4;
 }
 
 .Buttons {
@@ -22,6 +23,7 @@
     align-items: center;
     position: fixed;
     bottom: 10px;
+    z-index: 4;
 }
 
 button,
@@ -35,7 +37,7 @@ button:active{
     outline:none;
     padding:0;
     margin: 5px;
-    background: rgb(0, 0, 0, 0.5);
+    background: rgb(0, 0, 0, 0.51);
     color: aliceblue;
 }
 

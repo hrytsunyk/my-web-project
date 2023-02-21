@@ -1,4 +1,4 @@
-.PosterPreview {
+.PosterPreview{
     width: 250px;
     height: 350px;
     margin: 30px;
@@ -6,20 +6,19 @@
 }
 
 .PosterPreview:hover{
-    margin-top: -0px;
+    margin-top: -10px;
     transition: 500ms;
-
+    cursor: pointer;
 }
 
-img {
+img{
     width: 250px;
     height: 350px;
 
 }
 img:hover{
     transition: 500ms;
-    box-shadow: #ffffff 0px 0 1000px 0px ;
-    z-index: -1;
+    box-shadow: #466293 0 0 50px 0px;
 }
 
 .titleDiv {
@@ -34,7 +33,7 @@ img:hover{
     padding: 10px;
     box-sizing: border-box;
 }
-h4{
+h4, .ahref{
     margin: 0;
     color: aliceblue;
 }

@@ -4,8 +4,8 @@ import css from './BaseLayout.module.css'
 import {ThemeProvider} from 'styled-components'
 import {createContext, useContext, useState} from "react";
 import DayNightToggle from "react-day-and-night-toggle";
+import {GenreBadges} from "../components/GenreBadge/GenreBadges";
 
-// const ThemeContext = createContext(null);
 
 const BaseLayout = () => {
 
@@ -17,8 +17,8 @@ const BaseLayout = () => {
 
 
     return (
-        // <ThemeContext.Provider value={{theme, switchTheme}}>
         <div className={css.BaseLayout} id={theme}>
+            <GenreBadges/>
             <Header/>
             <div className={css.switch} >
                 <DayNightToggle className={css.toggle} onChange={switchTheme} checked={theme === 'dark'} size={20}/>
@@ -26,7 +26,6 @@ const BaseLayout = () => {
             <Outlet/>
             <Logo/>
         </div>
-        // </ThemeContext.Provider>
     );
 };
 

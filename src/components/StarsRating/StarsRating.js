@@ -3,9 +3,6 @@ import {useSelector} from "react-redux";
 
 const StarsRating = ({value}) => {
 
-   // const{movies}= useSelector(state => state.movies)
-
-    console.log(value)
     return (
         <div>
 
