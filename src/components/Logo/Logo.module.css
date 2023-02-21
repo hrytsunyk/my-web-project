@@ -1,7 +1,7 @@
 .Logo {
-    width: 100%;
+    width: 110%;
     height: 60px;
-    background: rgb(32, 36, 39);
+    /*background: rgb(32, 36, 39, 0.7);*/
     display: flex;
     justify-content: space-between;
     align-items: center;

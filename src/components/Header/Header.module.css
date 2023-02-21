@@ -5,7 +5,7 @@
 .Header{
     width: 100px;
     height: 100vh;
-    background: #202427;
+    background: rgb(0,0,0,0.7);
     color: #636468;
     display: flex;
     justify-content: space-between;

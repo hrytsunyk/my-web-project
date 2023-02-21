@@ -40,7 +40,7 @@ const MoviesList = () => {
                 <button>
                     <FontAwesomeIcon
                         icon={faArrowLeft}
-                        disabled={page <= 1}
+                        disabled={page >= 1}
                         onClick={() => setQuery(query => ({
                             page: +query.get('page') - 1
                         }))}
@@ -51,7 +51,7 @@ const MoviesList = () => {
                 <button>
                     <FontAwesomeIcon
                         icon={faArrowRight}
-                        disabled={page <= 0}
+                        disabled={page <= 500}
                         onClick={() => setQuery(query => ({
                             page: +query.get('page') + 1
                         }))}

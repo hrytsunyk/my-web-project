@@ -5,19 +5,19 @@ import {ThemeProvider} from 'styled-components'
 import {createContext, useContext, useState} from "react";
 import DayNightToggle from "react-day-and-night-toggle";
 
-const ThemeContext = createContext(null);
+// const ThemeContext = createContext(null);
 
 const BaseLayout = () => {
 
-    const[theme, setTheme] = useState('light');
+    const[theme, setTheme] = useState('dark');
     
     const switchTheme = () => {
-      setTheme(prevState => prevState==='light'?'dark':'light')
+      setTheme(prevState => prevState==='dark'?'light':'dark')
     }
 
 
     return (
-        <ThemeContext.Provider value={{theme, switchTheme}}>
+        // <ThemeContext.Provider value={{theme, switchTheme}}>
         <div className={css.BaseLayout} id={theme}>
             <Header/>
             <div className={css.switch} >
@@ -26,7 +26,7 @@ const BaseLayout = () => {
             <Outlet/>
             <Logo/>
         </div>
-        </ThemeContext.Provider>
+        // </ThemeContext.Provider>
     );
 };
 

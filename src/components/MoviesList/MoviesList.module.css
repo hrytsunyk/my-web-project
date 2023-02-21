@@ -3,9 +3,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-left: 100px;
-    margin-bottom: 50px;
+    margin: 30px 0 50px 100px;
+    /*padding: 30px;*/
 }
+
 .MoviesList {
     width: 80%;
     display: flex;
@@ -23,21 +24,6 @@
     bottom: 10px;
 }
 
-/*button {*/
-/*    width: 40px;*/
-/*    font-size: 20px;*/
-/*    height: 40px;*/
-/*    color: aliceblue;*/
-/*    background: #2a2e33;*/
-/*    margin:10px;*/
-/*    text-align: center;*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    border-radius: 50%;*/
-
-/*}*/
-
 button,
 button:focus,
 button:active{
@@ -52,14 +38,10 @@ button:active{
     background: rgb(0, 0, 0, 0.5);
     color: aliceblue;
 }
-/*button span{*/
-/*    position: relative;*/
-/*}*/
 
 button:hover{
     cursor: pointer;
     background: rgba(255, 10, 10, 0.8);
-    /*box-shadow: #ffffff 1px 1px 5px 1px;*/
 
 }
 
