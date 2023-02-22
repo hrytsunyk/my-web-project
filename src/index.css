@@ -22,6 +22,7 @@ code {
 
 #light {
     background: #ffffff;
+    color: aliceblue;
     transition: 500ms;
 
 }

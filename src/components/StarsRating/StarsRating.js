@@ -1,5 +1,4 @@
 import { Rating} from '@mui/material';
-import {useSelector} from "react-redux";
 
 const StarsRating = ({value}) => {
 

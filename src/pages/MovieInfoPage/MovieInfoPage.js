@@ -1,11 +1,11 @@
 import {MovieInfo} from "../../components/MovieInfo/MovieInfo";
-import {MoviesList, MoviesListCard} from "../../components";
-import {MovieListCard} from "../../components/MovieListCard/MovieListCard";
+import {MoviesListCard} from "../../components/MoviesListCard/MoviesListCard";
+// import {MoviesListCard} from "../../components/MoviesListCard/MoviesListCard";
 
 const MovieInfoPage = () => {
     return (
         <div>
-            <MovieListCard/>
+            <MovieInfo/>
         </div>
     );
 };
