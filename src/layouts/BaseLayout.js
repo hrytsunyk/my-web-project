@@ -3,7 +3,7 @@ import {Header, Logo} from "../components";
 import css from './BaseLayout.module.css'
 import DayNightToggle from "react-day-and-night-toggle";
 import {GenreBadges} from "../components/GenreBadge/GenreBadges";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 
 const BaseLayout = () => {

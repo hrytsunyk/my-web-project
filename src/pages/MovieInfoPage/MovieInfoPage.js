@@ -1,10 +1,9 @@
 import {MovieInfo} from "../../components/MovieInfo/MovieInfo";
-import {MoviesListCard} from "../../components/MoviesListCard/MoviesListCard";
-// import {MoviesListCard} from "../../components/MoviesListCard/MoviesListCard";
+import css from './MovieInfoPage.module.css';
 
 const MovieInfoPage = () => {
     return (
-        <div>
+        <div className={css.MovieInfoPage}>
             <MovieInfo/>
         </div>
     );

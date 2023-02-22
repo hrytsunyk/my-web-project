@@ -9,7 +9,7 @@ const PosterPreview = ({poster,title}) => {
         <div>
 
             <div className={css.PosterPreview}>
-                <img src={`${imageURL}${poster}`} alt={title}/>
+                <img className={css.PostersList} src={`${imageURL}${poster}`} alt={title}/>
             </div>
 
         </div>

@@ -1,4 +1,4 @@
-import {useDispatch, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 import css from './MoviesList.module.css';
 import {MoviesListCard} from "../MoviesListCard/MoviesListCard";
 import {ButtonsPagination} from "../ButtonsPagination/ButtonsPagination";
