@@ -6,7 +6,7 @@ import {useSearchParams} from "react-router-dom";
 import {useEffect} from "react";
 import {movieActions} from "../../redux/slices/movieSlice";
 
-const ButtonsPagination = () => {
+const PagePagination = () => {
 
     const dispatch = useDispatch();
 
@@ -47,4 +47,4 @@ const ButtonsPagination = () => {
     );
 };
 
-export {ButtonsPagination};
+export {PagePagination};

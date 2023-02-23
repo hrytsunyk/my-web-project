@@ -1,7 +1,7 @@
 import {useSelector} from "react-redux";
 import css from './MoviesList.module.css';
 import {MoviesListCard} from "../MoviesListCard/MoviesListCard";
-import {ButtonsPagination} from "../ButtonsPagination/ButtonsPagination";
+import {PagePagination} from "../PagePagination/PagePagination";
 
 
 
@@ -18,7 +18,7 @@ const MoviesList = () => {
                 {movies.map((movie, index) => <MoviesListCard key={index} movie={movie}/>)}
             </div>
 
-            <ButtonsPagination/>
+            <PagePagination/>
 
         </div>
     );

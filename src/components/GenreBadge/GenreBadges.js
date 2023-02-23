@@ -9,9 +9,9 @@ const GenreBadges = () => {
     const {genres} = useSelector(state => state.genres);
 
 
-    useEffect(()=>{
+    useEffect(() => {
         dispatch(genreAction.getGenres())
-    },[dispatch])
+    }, [dispatch])
 
 
     return (
