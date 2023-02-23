@@ -18,7 +18,6 @@ const Header = () => {
                         <NavLink to={'/home'}><FontAwesomeIcon icon={faHome}/></NavLink>
                         <NavLink to={'/movies'}><FontAwesomeIcon icon={faFilm}/></NavLink>
                         <NavLink to={'/user'}><FontAwesomeIcon icon={faUser}/></NavLink>
-                        <NavLink to={'/search'}><FontAwesomeIcon icon={faSearch}/></NavLink>
                     </div>
 
                     <NavLink to={'logout'}><FontAwesomeIcon icon={faSignOut}/></NavLink>

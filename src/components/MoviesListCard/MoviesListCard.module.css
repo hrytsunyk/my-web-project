@@ -1,12 +1,14 @@
 .MoviesListCard {
     width: 250px;
     height: 350px;
-    margin: 30px;
+    margin: 20px;
     transition: 500ms;
 }
 
+
+
 .MoviesListCard:hover {
-    margin-top: -10px;
+    margin-top: 10px;
     transition: 500ms;
     cursor: pointer;
 }
@@ -26,7 +28,3 @@
     color: aliceblue;
 }
 
-/*h4{*/
-/*    margin: 0;*/
-/*    color: aliceblue;*/
-/*}*/
