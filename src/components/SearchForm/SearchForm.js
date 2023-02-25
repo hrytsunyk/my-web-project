@@ -1,4 +1,4 @@
-import {NavLink, useParams, useSearchParams} from "react-router-dom";
+import {NavLink, useNavigate, useParams, useSearchParams} from "react-router-dom";
 import {useForm} from "react-hook-form";
 import {Input, TextField} from "@mui/material";
 import css from './Search.module.css';
@@ -23,25 +23,26 @@ const SearchForm = () => {
         dispatch(searchActions.getSearch({searchParam}))
     }, [dispatch, query])
 
-    console.log(searchParam)
+
 
 
 
     return (
-        <form className={css.search}
-              onSubmit={handleSubmit((searchParam) => setQuery(searchParam))}>
+            <form className={css.search}
+                  onSubmit={handleSubmit((searchParam) => setQuery(searchParam))}>
 
-            <TextField
-                id="outlined-basic"
-                variant="outlined"
-                fullWidth
-                label="Search"
-                placeholder='Search'
-                {...register('search')}
-            />
-            {/*<button>search</button>*/}
-            <button className={css.inputButton}><FontAwesomeIcon icon={faSearch}/></button>
-        </form>
+                <TextField
+                    id="outlined-basic"
+                    variant="outlined"
+                    fullWidth
+                    label="Search"
+                    placeholder='Search'
+                    {...register('search')}
+
+                />
+                {/*<button>search</button>*/}
+                <button className={css.inputButton}><FontAwesomeIcon icon={faSearch}/></button>
+            </form>
     );
 };
 

@@ -22,15 +22,13 @@ const MoviesListCard = ({movie}) => {
         <NavLink to={`/movie/${movieId}`}>
 
 
-            {movie &&  <div className={css.MoviesListCard}>
-
-                        <PosterPreview poster={poster_path} title={title} id={id}/>
-                        <StarsRating value={vote_average}/>
-
+            {poster_path &&
+                <div className={css.MoviesListCard}>
+                    <PosterPreview poster={poster_path} title={title} id={id} vote_average={vote_average}/>
                 </div>}
 
-                </NavLink>
-                );
-            };
+        </NavLink>
+    );
+};
 
-            export {MoviesListCard};
+export {MoviesListCard};

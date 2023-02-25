@@ -8,9 +8,8 @@
 
 
 .MoviesListCard:hover {
-    margin-top: 10px;
-    transition: 500ms;
     cursor: pointer;
+    box-shadow: #466293;
 }
 
 

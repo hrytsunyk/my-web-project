@@ -1,16 +1,15 @@
 import {SearchForm} from "../../components/SearchForm/SearchForm";
 import {useSelector} from "react-redux";
 import {PosterPreview} from "../../components";
+import {SearchingList} from "../../components/SearchingList/SearchingList";
 
 const SearchPage = () => {
 
-    const {searchResult} = useSelector(state => state.search);
 
-    console.log(searchResult)
 
     return (
         <div>
-            {/*<PosterPreview poster={value}/>*/}
+            <SearchingList/>
         </div>
     );
 }

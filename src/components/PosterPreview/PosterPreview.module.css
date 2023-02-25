@@ -1,11 +1,17 @@
-.PostersList{
+.PostersImg {
     width: 250px;
     height: 350px;
+    /*transition: 500ms;*/
+    /*padding: 10px;*/
+    margin: 0 auto;
+    background-color: transparent;
+    transition: transform 500ms;
 
 }
-.PostersList:hover{
-    transition: 500ms;
-    box-shadow: #466293 0 0 50px 0px;
 
+.PostersImg:hover {
+    box-shadow: 0 0 40px 0 #466293;
+    transform: scale(110%);
+    transition: 500ms;
 }
 
