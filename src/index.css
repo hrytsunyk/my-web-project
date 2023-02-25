@@ -16,8 +16,8 @@ code {
     background: #1e2224;
     color: aliceblue;
     transition: 500ms;
-
-
+    position: fixed;
+    overflow-y: scroll;
 }
 
 #light {
@@ -25,11 +25,5 @@ code {
     color: aliceblue;
     transition: 500ms;
 
-}
-
-
-#light .Header {
-    background: #a8a8a8;
-    transition: 500ms;
 }
 

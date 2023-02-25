@@ -44,7 +44,7 @@ const movieSlice = createSlice({
     extraReducers: (builder) => {
         builder
             .addCase(getMovies.fulfilled, (state, action) => {
-                console.log(action.payload);
+                // console.log(action.payload);
                 const {page, results, total_pages} = action.payload
                 state.loading = false;
                 state.page = page;
@@ -56,7 +56,7 @@ const movieSlice = createSlice({
                 state.loading = true
             })
             .addCase(getInfo.fulfilled, (state, action) => {
-                console.log(action.payload);
+                // console.log(action.payload);
                 state.movieInfo=action.payload
             })
 

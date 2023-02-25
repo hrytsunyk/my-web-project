@@ -9,7 +9,8 @@ const Header = () => {
 
 
     return (
-        <div>
+
+        <div className={css.HeaderFather}>
             <div className={css.Header}>
 
                 <div className={css.Icons}>
@@ -24,6 +25,7 @@ const Header = () => {
                 </div>
             </div>
         </div>
+
     );
 };
 

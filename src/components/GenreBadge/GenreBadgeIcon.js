@@ -4,7 +4,7 @@ const GenreBadgeIcon = ({genre}) => {
 
     const {name} = genre;
 
-    console.log(name);
+    // console.log(name);
 
     return (
         <div className={css.BadgeIconFather}>

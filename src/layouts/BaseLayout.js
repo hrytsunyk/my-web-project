@@ -17,7 +17,7 @@ const BaseLayout = () => {
     return (
         <div className={css.BaseLayout} id={theme}>
             <GenreBadges/>
-            <Header/>
+            <Logo/>
             <div className={css.switch}>
                 <DayNightToggle
                     className={css.toggle}
@@ -26,8 +26,8 @@ const BaseLayout = () => {
                     size={20}
                 />
             </div>
+            <Header/>
             <Outlet/>
-            <Logo/>
         </div>
     );
 };

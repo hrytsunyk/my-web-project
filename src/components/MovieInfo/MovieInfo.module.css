@@ -95,7 +95,6 @@ p{
     flex-wrap: wrap;
     margin: 0;
     box-sizing: border-box;
-    flex-direction: column;
 }
 
 .overview  {
@@ -105,6 +104,7 @@ p{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
 }
 
 /*h4{*/
@@ -116,3 +116,10 @@ hr {
     height: 1px;
     background: aliceblue;
 }
+
+
+.backdrop{
+    width: 400px;
+    /*display: flex;*/
+}
+

@@ -1,0 +1,11 @@
+.search {
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+.inputButton{
+    width: 50px;
+    height: 40px;
+    cursor: pointer;
+}

@@ -5,6 +5,8 @@ import {useDispatch, useSelector} from "react-redux";
 import {useSearchParams} from "react-router-dom";
 import {useEffect} from "react";
 import {movieActions} from "../../redux/slices/movieSlice";
+import {searchActions} from "../../redux/slices/searchSlice";
+import {SearchForm} from "../SearchForm/SearchForm";
 
 const PagePagination = () => {
 
@@ -12,35 +14,44 @@ const PagePagination = () => {
 
     const {page} = useSelector(state => state.movies);
 
+
     // console.log(page)
     const [query, setQuery] = useSearchParams({page: '1'});
 
     useEffect(() => {
         dispatch(movieActions.getMovies({page: query.get('page')}))
+
     }, [dispatch, query])
+
+
+    // useEffect(() => {
+    //     dispatch(searchActions.getSearch({page: query.get('page')}))
+    //
+    // }, [dispatch, query])
 
 
     return (
 
             <div className={css.Buttons}>
-                <button>
+                <button
+                    onClick={() => setQuery(query => ({
+                    page: +query.get('page') - 1}))}
+                disabled={page<=1}>
                     <FontAwesomeIcon
                         icon={faArrowLeft}
-                        disabled={page >= 1}
-                        onClick={() => setQuery(query => ({
-                            page: +query.get('page') - 1
-                        }))}
+                        disabled={page}
                     />
                 </button>
 
 
-                <button>
+                <button onClick={() => setQuery(query => ({
+                    page: +query.get('page') + 1}))}
+                        disabled={page>=500}
+                >
                     <FontAwesomeIcon
                         icon={faArrowRight}
-                        disabled={page <= 500}
-                        onClick={() => setQuery(query => ({
-                            page: +query.get('page') + 1
-                        }))}
+
+
                     />
                 </button>
             </div>

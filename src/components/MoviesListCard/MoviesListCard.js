@@ -2,26 +2,35 @@ import css from './MoviesListCard.module.css'
 import {StarsRating} from "../StarsRating/StarsRating";
 import {PosterPreview} from "../PosterPreview/PosterPreview";
 import {NavLink} from "react-router-dom";
+import {useSelector} from "react-redux";
 
 
 const MoviesListCard = ({movie}) => {
     const {title, poster_path, vote_average, id} = movie;
 
 
-    const movieId = id.toString();
+    // const {name} = value;
+    // console.log(name);
+    // console.log(searchedId);
+    console.log(id)
 
+
+    const movieId = id.toString();
 
 
     return (
         <NavLink to={`/movie/${movieId}`}>
-            <div className={css.MoviesListCard}>
 
-                <div className={css.titleDiv}><h6>{title}</h6></div>
-                <PosterPreview poster={poster_path} title={title}/>
-                <StarsRating value={vote_average}/>
-            </div>
-        </NavLink>
-    );
-};
 
-export {MoviesListCard};
+            {movie &&  <div className={css.MoviesListCard}>
+
+                        <PosterPreview poster={poster_path} title={title} id={id}/>
+                        <StarsRating value={vote_average}/>
+
+                </div>}
+
+                </NavLink>
+                );
+            };
+
+            export {MoviesListCard};

@@ -3,7 +3,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .MoviesList {
@@ -12,8 +11,9 @@
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: 50px;
     margin-bottom: 50px;
-    z-index: 4;
+    z-index: 5;
 }
 
 .Buttons {
@@ -23,7 +23,7 @@
     align-items: center;
     position: fixed;
     bottom: 10px;
-    z-index: 4;
+    z-index: 5;
 }
 
 button,
@@ -52,5 +52,18 @@ button:active{
     font-size: 15px;
     transition: 500ms;
 }
+button:disabled{
+
+    background: rgba(255, 255, 255, 0.2);
+    font-size: 15px;
+    transition: 500ms;
+}
 
 
+.loading{
+    width: 100vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

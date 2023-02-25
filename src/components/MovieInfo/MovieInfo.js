@@ -6,17 +6,18 @@ import {imageURL} from "../../configs";
 import css from './MovieInfo.module.css';
 import {StarsRating} from "../StarsRating/StarsRating";
 import {GenreBadges} from "../GenreBadge/GenreBadges";
+import {PosterPreview} from "../PosterPreview/PosterPreview";
+import {GenreBadgeIcon} from "../GenreBadge/GenreBadgeIcon";
 
 
 const MovieInfo = () => {
 
     const {movieInfo} = useSelector(state => state.movies);
-    // let {title} =movieInfo;
+
     console.log(movieInfo)
 
     const dispatch = useDispatch();
     const {movieId} = useParams();
-
 
     useEffect(() => {
         dispatch(movieActions.getInfo({movieId}))
@@ -55,13 +56,15 @@ const MovieInfo = () => {
                         <div className={css.MovieInfo}>
                             <div className={css.PosterMovie}>
                                 <img
-                                className={css.Poster}
+                                    className={css.Poster}
                                     src={`${imageURL}${movieInfo.poster_path}`}
-                                     alt={movieInfo.title}
+                                    alt={movieInfo.title}
                                 />
                                 <div className={css.overviewFather}>
                                     <div className={css.overview}><h4>Overview:</h4><p>{movieInfo.overview}</p></div>
                                 </div>
+
+
                             </div>
 
 
@@ -69,6 +72,7 @@ const MovieInfo = () => {
 
                                 <h3 className={css.PosterTitle}>{movieInfo.title}</h3>
                                 <div className={css.Budges}><h5>{genres}</h5></div>
+                                {/*<GenreBadgeIcon genre={genres}/>*/}
                                 <div><h4 className={css.budget}>Budget:</h4><p>{movieInfo.budget}$</p></div>
                                 <div><h4 className={css.revenue}>Revenue:</h4><p>{movieInfo.revenue}$</p></div>
                                 <div><h4 className={css.status}>Status:</h4><p>{movieInfo.status}</p></div>
@@ -82,13 +86,10 @@ const MovieInfo = () => {
                                     value={movieInfo.vote_average}/>
                                 </div>
 
-                        <hr/>
+                                <hr/>
+                                {/*<div><img className={css.backdrop} src={`${imageURL}${movieInfo.backdrop_path}`} alt={movieInfo.title}/></div>*/}
                             </div>
-                    </div>
-                        {/*<div className={css.overviewFather}>*/}
-                        {/*    <div className={css.overview}><h4>Overview:</h4><p>{movieInfo.overview}</p></div>*/}
-                        {/*</div>*/}
-
+                        </div>
 
                     </div>
 
