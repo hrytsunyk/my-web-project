@@ -2,7 +2,7 @@ import css from "../MoviesList/MoviesList.module.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faArrowLeft, faArrowRight} from "@fortawesome/free-solid-svg-icons";
 import {useDispatch, useSelector} from "react-redux";
-import {useSearchParams} from "react-router-dom";
+import {useNavigate, useSearchParams} from "react-router-dom";
 import {useEffect} from "react";
 import {movieActions} from "../../redux/slices/movieSlice";
 import {searchActions} from "../../redux/slices/searchSlice";
@@ -15,6 +15,7 @@ const PagePagination = () => {
     const {page} = useSelector(state => state.movies);
 
 
+
     // console.log(page)
     const [query, setQuery] = useSearchParams({page: '1'});
 
@@ -24,10 +25,7 @@ const PagePagination = () => {
     }, [dispatch, query])
 
 
-    // useEffect(() => {
-    //     dispatch(searchActions.getSearch({page: query.get('page')}))
-    //
-    // }, [dispatch, query])
+
 
 
     return (

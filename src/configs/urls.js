@@ -13,7 +13,7 @@ const urls = {
         genresURL: `${genres}${movies}/list`,
         moviesID: `${movies}`
     },
-    searchURL: search
+    searchURL: `${search}${movies}`
 }
 
 export {

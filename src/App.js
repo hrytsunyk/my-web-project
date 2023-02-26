@@ -1,4 +1,4 @@
-import {Navigate, Route, Routes} from "react-router-dom";
+import {Navigate, Route, Routes, useLocation} from "react-router-dom";
 import {MoviesPage} from "./pages/MoviesPage/MoviesPage";
 import {BaseLayout} from "./layouts";
 import {MovieInfo} from "./components/MovieInfo/MovieInfo";
@@ -15,6 +15,7 @@ const App = () => {
     // const switchTheme = () => {
     //     setTheme(prevState => prevState === 'dark' ? 'light' : 'dark')
     // }
+   const location = useLocation();
 
     return (
 
@@ -22,20 +23,15 @@ const App = () => {
         <Routes>
             <Route path={'/'} element={<BaseLayout/>}>
                 <Route index element={<Navigate to={'movies'}/>}/>
-                <Route path={'movies'} element={<MoviesPage/>}>
-                <Route path={':search'} element={<MoviesPage/>}/>
 
-                </Route>
-                {/*<Route path={':search'} element={<MoviesPage/>}/>*/}
+                <Route path={'movies'} element={<MoviesPage/>}/>
 
-
+                <Route path={'search/:name'} element={<SearchPage/>}/>
 
                 <Route path={'movie/:movieId'} element={<MovieInfoPage/>}/>
                 <Route path={'home'} element={<HomePage/>}/>
                 <Route path={'user'} element={<UserPage/>}/>
-                {/*<Route path={'movie'} element={<MoviePage/>}/>*/}
-                {/*<Route path={'user'} element={<UserPage/>}/>*/}
-                {/*<Route path={'search'} element={<SearchPage/>}/>*/}
+
             </Route>
         </Routes>
 

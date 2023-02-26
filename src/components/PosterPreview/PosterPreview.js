@@ -1,19 +1,18 @@
 import {imageURL} from "../../configs";
 
 import css from './PosterPreview.module.css'
-import {StarsRating} from "../StarsRating/StarsRating";
 
 
-const PosterPreview = ({poster,title, vote_average}) => {
+const PosterPreview = ({poster,title, mainId}) => {
     
     return (
-        <div>
 
             <div className={css.PosterPreview}>
-                <img className={css.PostersImg} src={`${imageURL}${poster}`} alt={title}/>
+                <img className={css.PostersImg} src={`${imageURL}${poster}`} alt={title} id={mainId} />
+
             </div>
 
-        </div>
+
     );
 };
 

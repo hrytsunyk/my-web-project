@@ -12,7 +12,7 @@ const MoviesListCard = ({movie}) => {
     // const {name} = value;
     // console.log(name);
     // console.log(searchedId);
-    console.log(id)
+    // console.log(id)
 
 
     const movieId = id.toString();
@@ -24,7 +24,7 @@ const MoviesListCard = ({movie}) => {
 
             {poster_path &&
                 <div className={css.MoviesListCard}>
-                    <PosterPreview poster={poster_path} title={title} id={id} vote_average={vote_average}/>
+                    <PosterPreview poster={poster_path} title={title} id={id} mainId={id}/>
                 </div>}
 
         </NavLink>

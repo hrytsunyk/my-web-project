@@ -1,0 +1,18 @@
+.SearchingList{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    z-index: 5;
+}
+
+.SearchingListFather {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
