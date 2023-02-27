@@ -1,9 +1,8 @@
-import {Navigate, Route, Routes, useLocation} from "react-router-dom";
+import {Navigate, Route, Routes} from "react-router-dom";
 
 
 import {BaseLayout} from "./layouts";
 import {HomePage, MovieInfoPage, MoviesPage, NotFoundPage, SearchPage, UserPage} from "./pages";
-import {useEffect} from "react";
 
 
 const App = () => {

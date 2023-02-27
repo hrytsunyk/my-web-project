@@ -3,13 +3,13 @@ import {useEffect} from "react";
 import {useParams} from "react-router-dom";
 
 
-import {movieActions} from "../../redux/slices/movieSlice";
 import {imageURL} from "../../configs";
 
 import {StarsRating} from "../StarsRating/StarsRating";
 import {GenreBadgeIcon} from "../GenreBadge/GenreBadgeIcon";
 
 import css from './MovieInfo.module.css';
+import {movieActions} from "../../redux";
 
 
 
@@ -23,7 +23,7 @@ const MovieInfo = () => {
 
     useEffect(() => {
         dispatch(movieActions.getInfo({movieId}))
-    }, [dispatch])
+    }, [dispatch,movieId])
 
     const genres = [];
     const countries = [];

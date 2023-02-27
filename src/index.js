@@ -1,10 +1,11 @@
-import React, {useContext, useState} from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import {App} from './App';
 import {BrowserRouter} from "react-router-dom";
-import {setupStore} from "./redux/store";
 import {Provider} from "react-redux";
+
+import {App} from './App';
+import {setupStore} from "./redux";
+
+import './index.css';
 import './layouts/BaseLayout.module.css'
 
 const store = setupStore();
