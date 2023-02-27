@@ -1,9 +1,10 @@
+import {useState} from "react";
 import {Outlet} from "react-router-dom";
-import {Header, Logo} from "../components";
-import css from './BaseLayout.module.css'
+
+import {GenreBadges, Header, Logo} from "../components";
+
 import DayNightToggle from "react-day-and-night-toggle";
-import {GenreBadges} from "../components/GenreBadge/GenreBadges";
-import {useEffect, useState} from "react";
+import css from './BaseLayout.module.css'
 
 
 const BaseLayout = () => {

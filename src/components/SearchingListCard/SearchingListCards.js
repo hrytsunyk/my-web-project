@@ -1,5 +1,4 @@
 import {PosterPreview} from "../PosterPreview/PosterPreview";
-import {Link} from "@mui/material";
 import css from './SearchingListCard.module.css';
 import {NavLink} from "react-router-dom";
 
