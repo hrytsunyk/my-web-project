@@ -1,9 +1,9 @@
 import {useEffect} from "react";
 import {useSearchParams} from "react-router-dom";
 
+import {movieActions} from "../../redux";
 
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {movieActions} from "../../redux/slices/movieSlice";
 import {faArrowLeft, faArrowRight} from "@fortawesome/free-solid-svg-icons";
 import {useDispatch, useSelector} from "react-redux";
 
