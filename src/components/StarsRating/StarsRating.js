@@ -7,7 +7,7 @@ const StarsRating = ({value}) => {
 
             <Rating
                 name="text-feedback"
-                value={value/2}
+                value={value?value/2:4}
                 readOnly
                 precision={0.1}
             />

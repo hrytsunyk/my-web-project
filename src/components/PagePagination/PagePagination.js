@@ -25,13 +25,14 @@ const PagePagination = () => {
     }, [dispatch, query])
 
 
+
     return (
 
         <div className={css.Buttons}>
             <button
-                onClick={() => setQuery(query => ({
-                    page: +query.get('page') - 1
-                }))}
+                onClick={() => {setQuery(query => ({
+                    page: +query.get('page') - 1,
+                }))}}
                 disabled={page <= 1}>
                 <FontAwesomeIcon
                     icon={faArrowLeft}

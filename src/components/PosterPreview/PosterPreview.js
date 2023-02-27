@@ -11,7 +11,7 @@ const PosterPreview = ({poster,title, mainId, vote}) => {
             <div className={css.PosterPreview}>
                 <div className={css.titleDiv}><h6>{title}</h6></div>
                 <img className={css.PostersImg} src={`${imageURL}${poster}`} alt={title} id={mainId} />
-                <StarsRating value={vote}/>
+                <StarsRating value={vote?vote:4}/>
 
             </div>
 
