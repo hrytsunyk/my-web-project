@@ -16,8 +16,8 @@ code {
     background: #1e2224;
     color: aliceblue;
     transition: 500ms;
-    /*position: fixed;*/
-    /*overflow-y: scroll;*/
+    position: fixed;
+    overflow-y: scroll;
 }
 
 #light {
