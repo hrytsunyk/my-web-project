@@ -16,6 +16,7 @@ const BaseLayout = () => {
 
     return (
         <div className={css.BaseLayout} id={theme}>
+
             <GenreBadges/>
             <Logo/>
             <div className={css.switch}>
@@ -28,6 +29,7 @@ const BaseLayout = () => {
             </div>
             <Header/>
             <Outlet/>
+
         </div>
     );
 };
