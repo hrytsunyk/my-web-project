@@ -35,7 +35,6 @@ const PagePagination = () => {
                 disabled={page <= 1}>
                 <FontAwesomeIcon
                     icon={faArrowLeft}
-                    disabled={page}
                 />
             </button>
 
