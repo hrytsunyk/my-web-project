@@ -1,10 +1,9 @@
 .MovieInfoFather {
     width: 100%;
-    margin-top: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    margin: 60px 0 50px 0;
     box-sizing: border-box;
     z-index: +5;
 }
