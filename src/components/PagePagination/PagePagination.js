@@ -17,7 +17,6 @@ const PagePagination = () => {
     const {page} = useSelector(state => state.movies);
 
 
-
     const [query, setQuery] = useSearchParams({page: '1'});
 
     useEffect(() => {
@@ -26,32 +25,33 @@ const PagePagination = () => {
     }, [dispatch, query])
 
 
-
     return (
 
-            <div className={css.Buttons}>
-                <button
-                    onClick={() => setQuery(query => ({
-                    page: +query.get('page') - 1}))}
-                disabled={page<=1}>
-                    <FontAwesomeIcon
-                        icon={faArrowLeft}
-                        disabled={page}
-                    />
-                </button>
+        <div className={css.Buttons}>
+            <button
+                onClick={() => setQuery(query => ({
+                    page: +query.get('page') - 1
+                }))}
+                disabled={page <= 1}>
+                <FontAwesomeIcon
+                    icon={faArrowLeft}
+                    disabled={page}
+                />
+            </button>
 
 
-                <button onClick={() => setQuery(query => ({
-                    page: +query.get('page') + 1}))}
-                        disabled={page>=500}
-                >
-                    <FontAwesomeIcon
-                        icon={faArrowRight}
+            <button onClick={() => setQuery(query => ({
+                page: +query.get('page') + 1
+            }))}
+                    disabled={page >= 500}
+            >
+                <FontAwesomeIcon
+                    icon={faArrowRight}
 
 
-                    />
-                </button>
-            </div>
+                />
+            </button>
+        </div>
     );
 };
 

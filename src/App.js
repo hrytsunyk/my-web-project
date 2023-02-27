@@ -3,9 +3,11 @@ import {Navigate, Route, Routes, useLocation} from "react-router-dom";
 
 import {BaseLayout} from "./layouts";
 import {HomePage, MovieInfoPage, MoviesPage, NotFoundPage, SearchPage, UserPage} from "./pages";
+import {useEffect} from "react";
 
 
 const App = () => {
+
 
 
     return (
@@ -19,7 +21,7 @@ const App = () => {
                 <Route path={'home'} element={<HomePage/>}/>
                 <Route path={'user'} element={<UserPage/>}/>
                 <Route path={'*'} element={<NotFoundPage/>}/>
-
+                
             </Route>
         </Routes>
 

@@ -16,7 +16,6 @@ const MoviesList = () => {
 
 
 
-
     return (
 
         <div className={css.MoviesListFather}>
