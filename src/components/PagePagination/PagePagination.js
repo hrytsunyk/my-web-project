@@ -47,8 +47,6 @@ const PagePagination = () => {
             >
                 <FontAwesomeIcon
                     icon={faArrowRight}
-
-
                 />
             </button>
         </div>
