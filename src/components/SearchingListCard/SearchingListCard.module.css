@@ -1,7 +1,7 @@
 .SearchingListCard {
     width: 250px;
     height: 350px;
-    margin: 20px;
+    margin: 30px;
     transition: 500ms;
 }
 
@@ -11,19 +11,3 @@
     cursor: pointer;
     box-shadow: #466293;
 }
-
-
-/*.titleDiv {*/
-/*    width: 250px;*/
-/*    height: 60px;*/
-/*    background: rgb(0, 0, 0, 0.4);*/
-/*    position: relative;*/
-/*    top: 60px;*/
-/*    display: flex;*/
-/*    justify-content: flex-start;*/
-/*    align-items: center;*/
-/*    padding: 10px;*/
-/*    box-sizing: border-box;*/
-/*    color: aliceblue;*/
-/*}*/
-

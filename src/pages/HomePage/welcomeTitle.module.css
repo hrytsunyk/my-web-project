@@ -1,0 +1,9 @@
+.welcomeTitle{
+    font-size: 40px;
+    width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top:200px;
+}

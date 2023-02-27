@@ -1,13 +1,13 @@
 import {useSelector} from "react-redux";
+
 import {SearchingListCards} from "../SearchingListCard/SearchingListCards";
-import {useNavigate} from "react-router-dom";
 import css from './SearchingList.module.css'
-import {PagePagination} from "../PagePagination/PagePagination";
+import {CircularProgress} from "@mui/material";
+import React from "react";
+
 
 const SearchingList = () => {
-const {searchResult,page,totalPages}=useSelector(state => state.search);
-
-    console.log(searchResult)
+const {searchResult,loading}=useSelector(state => state.search);
 
 
     return (
@@ -15,9 +15,9 @@ const {searchResult,page,totalPages}=useSelector(state => state.search);
 
             <div className={css.SearchingList}>
                 {searchResult && searchResult.map((value, index) => <SearchingListCards key={index} value={value}/>)}
+                {loading && <div className={css.loading}><CircularProgress disableShrink/></div>}
 
             </div>
-
 
         </div>
     );

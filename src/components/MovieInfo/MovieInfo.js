@@ -1,20 +1,22 @@
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
-import {movieActions} from "../../redux/slices/movieSlice";
 import {useParams} from "react-router-dom";
+
+
+import {movieActions} from "../../redux/slices/movieSlice";
 import {imageURL} from "../../configs";
-import css from './MovieInfo.module.css';
+
 import {StarsRating} from "../StarsRating/StarsRating";
-import {GenreBadges} from "../GenreBadge/GenreBadges";
-import {PosterPreview} from "../PosterPreview/PosterPreview";
 import {GenreBadgeIcon} from "../GenreBadge/GenreBadgeIcon";
+
+import css from './MovieInfo.module.css';
+
 
 
 const MovieInfo = () => {
 
     const {movieInfo} = useSelector(state => state.movies);
 
-    console.log(movieInfo)
 
     const dispatch = useDispatch();
     const {movieId} = useParams();
@@ -30,7 +32,7 @@ const MovieInfo = () => {
     for (const key in movieInfo) {
         if (key === 'genres') {
             for (const genre of movieInfo[key]) {
-                genres.push(genre.name)
+                genres.push(genre)
             }
         }
         if (key === 'production_countries') {
@@ -51,9 +53,8 @@ const MovieInfo = () => {
         <div className={css.MovieInfoFather}>
             {movieInfo &&
                 <div className={css.starsBottom}>
-
-                    <div>
                         <div className={css.MovieInfo}>
+
                             <div className={css.PosterMovie}>
                                 <img
                                     className={css.Poster}
@@ -71,28 +72,22 @@ const MovieInfo = () => {
                             <div className={css.description}>
 
                                 <h3 className={css.PosterTitle}>{movieInfo.title}</h3>
-                                <div className={css.Budges}><h5>{genres}</h5></div>
-                                {/*<GenreBadgeIcon genre={genres}/>*/}
                                 <div><h4 className={css.budget}>Budget:</h4><p>{movieInfo.budget}$</p></div>
                                 <div><h4 className={css.revenue}>Revenue:</h4><p>{movieInfo.revenue}$</p></div>
+
                                 <div><h4 className={css.status}>Status:</h4><p>{movieInfo.status}</p></div>
                                 <div><h4 className={css.runtime}>Runtime:</h4><p>{movieInfo.runtime}min</p></div>
                                 <div><h4 className={css.tagline}>Tagline:</h4><p>{movieInfo.tagline}</p></div>
+
                                 <div><h4 className={css.country}>Country:</h4><p>{countries.join(' | ')}</p></div>
                                 <div><h4 className={css.companies}>Companies:</h4><p>{companies.join(' | ')}</p></div>
 
-                                <div className={css.RatingFather}>
-                                    <h4>Rating</h4><StarsRating
-                                    value={movieInfo.vote_average}/>
-                                </div>
-
+                                <div className={css.RatingFather}><h4>Rating</h4><StarsRating value={movieInfo.vote_average}/></div>
                                 <hr/>
-                                {/*<div><img className={css.backdrop} src={`${imageURL}${movieInfo.backdrop_path}`} alt={movieInfo.title}/></div>*/}
+                                <div className={css.Budges}>{genres && genres.map((name, index) => <GenreBadgeIcon key={index} genre={name}/>)}</div>
+
                             </div>
                         </div>
-
-                    </div>
-
                 </div>
 
 

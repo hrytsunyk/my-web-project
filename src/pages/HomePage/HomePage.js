@@ -1,9 +1,9 @@
-import {PosterPreview} from "../../components";
+import css from './welcomeTitle.module.css'
 
 const HomePage = () => {
     return (
-        <div>
-            {/*<PosterPreview poster={}/>*/}
+        <div className={css.welcomeTitle}>
+            <h1>HELLO OKTEN</h1>
         </div>
     );
 };

@@ -1,12 +1,14 @@
-import css from "../MoviesList/MoviesList.module.css";
+import {useEffect} from "react";
+import {useSearchParams} from "react-router-dom";
+
+
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {movieActions} from "../../redux/slices/movieSlice";
 import {faArrowLeft, faArrowRight} from "@fortawesome/free-solid-svg-icons";
 import {useDispatch, useSelector} from "react-redux";
-import {useNavigate, useSearchParams} from "react-router-dom";
-import {useEffect} from "react";
-import {movieActions} from "../../redux/slices/movieSlice";
-import {searchActions} from "../../redux/slices/searchSlice";
-import {SearchForm} from "../SearchForm/SearchForm";
+
+import css from "../MoviesList/MoviesList.module.css";
+
 
 const PagePagination = () => {
 
@@ -16,15 +18,12 @@ const PagePagination = () => {
 
 
 
-    // console.log(page)
     const [query, setQuery] = useSearchParams({page: '1'});
 
     useEffect(() => {
         dispatch(movieActions.getMovies({page: query.get('page')}))
 
     }, [dispatch, query])
-
-
 
 
 

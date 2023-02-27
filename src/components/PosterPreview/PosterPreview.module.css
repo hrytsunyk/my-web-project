@@ -1,17 +1,46 @@
 .PostersImg {
     width: 250px;
     height: 350px;
-    /*transition: 500ms;*/
-    /*padding: 10px;*/
+    margin: auto;
+    background-color: transparent;
+    transition: transform 500ms;
+
+}
+.PosterPreview{
+    width: 250px;
+    height: 350px;
     margin: 0 auto;
     background-color: transparent;
     transition: transform 500ms;
+}
+
+.PosterPreview:hover{
+    transform: scale(105%);
+    transition: 500ms;
 
 }
 
 .PostersImg:hover {
     box-shadow: 0 0 40px 0 #466293;
-    transform: scale(110%);
-    transition: 500ms;
 }
 
+.titleDiv {
+    width: 250px;
+    height: 60px;
+    background: rgb(0, 0, 0, 0.4);
+    position: relative;
+    top: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    color: aliceblue;
+    z-index: +2;
+    margin: auto;
+}
+
+/*.titleDiv:hover{*/
+/*    transform: scale(105%);*/
+/*    transition: 500ms;*/
+/*}*/

@@ -6,6 +6,7 @@
     align-items: center;
     padding: 50px;
     box-sizing: border-box;
+
 }
 
 
@@ -16,7 +17,6 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    /*flex-wrap: wrap;*/
 }
 
 .Poster{
@@ -30,12 +30,10 @@
     margin: 10px 0 0 30px;
     padding-right:30px;
 
-    /*flex-direction: column;*/
 }
 
 .PosterTitle  {
-    /*background: rgb(0,0,0, 0.3);*/
-    font-size: 20px;
+    font-size: 30px;
     margin: 0;
     display: flex;
     justify-content: flex-start;
@@ -66,9 +64,6 @@
     margin: 0;
 }
 
-/*h4{*/
-/*    margin: 10px;*/
-/*}*/
 
 .budget,
 .status,
@@ -120,6 +115,12 @@ hr {
 
 .backdrop{
     width: 400px;
-    /*display: flex;*/
 }
 
+.Budges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
