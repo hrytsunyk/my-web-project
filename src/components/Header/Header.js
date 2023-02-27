@@ -21,7 +21,7 @@ const Header = () => {
                         <NavLink to={'/user'}><FontAwesomeIcon icon={faUser}/></NavLink>
                     </div>
 
-                    <NavLink to={'/home'}><FontAwesomeIcon icon={faSignOut}/></NavLink>
+                    <NavLink to={'logout'}><FontAwesomeIcon icon={faSignOut}/></NavLink>
 
                 </div>
             </div>

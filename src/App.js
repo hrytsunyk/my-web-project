@@ -2,7 +2,7 @@ import {Navigate, Route, Routes, useLocation} from "react-router-dom";
 
 
 import {BaseLayout} from "./layouts";
-import {HomePage, MovieInfoPage, MoviesPage, SearchPage, UserPage} from "./pages";
+import {HomePage, MovieInfoPage, MoviesPage, NotFoundPage, SearchPage, UserPage} from "./pages";
 
 
 const App = () => {
@@ -18,6 +18,7 @@ const App = () => {
                 <Route path={'movie/:movieId'} element={<MovieInfoPage/>}/>
                 <Route path={'home'} element={<HomePage/>}/>
                 <Route path={'user'} element={<UserPage/>}/>
+                <Route path={'*'} element={<NotFoundPage/>}/>
 
             </Route>
         </Routes>

@@ -24,7 +24,7 @@ code {
     background: #ffffff;
     color: aliceblue;
     transition: 500ms;
-
-
+    /*position: fixed;*/
+    /*overflow-y: scroll;*/
 }
 
