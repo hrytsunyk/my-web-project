@@ -31,6 +31,7 @@ const searchSlice = createSlice({
         builder
             .addCase(getSearch.fulfilled, (state, action) => {
                 const {results, page, total_pages} = action.payload
+                console.log(results)
                 state.loading = false;
                 state.searchResult = results;
                 state.page = page;

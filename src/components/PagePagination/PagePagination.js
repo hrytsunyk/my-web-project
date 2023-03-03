@@ -11,7 +11,6 @@ import css from "../MoviesList/MoviesList.module.css";
 
 
 const PagePagination = () => {
-
     const dispatch = useDispatch();
 
     const {page} = useSelector(state => state.movies);
@@ -22,7 +21,11 @@ const PagePagination = () => {
     useEffect(() => {
         dispatch(movieActions.getMovies({page: query.get('page')}))
 
-    }, [dispatch, query])
+    }, [dispatch, query]);
+
+    const reload = () => {
+      window.location.reload(false)
+    }
 
 
 
@@ -30,9 +33,9 @@ const PagePagination = () => {
 
         <div className={css.Buttons}>
             <button
-                onClick={() => {setQuery(query => ({
+                onClick={() => reload(setQuery(query => ({
                     page: +query.get('page') - 1,
-                }))}}
+                })))}
                 disabled={page <= 1}>
                 <FontAwesomeIcon
                     icon={faArrowLeft}
@@ -40,9 +43,9 @@ const PagePagination = () => {
             </button>
 
 
-            <button onClick={() => setQuery(query => ({
+            <button onClick={() => reload(setQuery(query => ({
                 page: +query.get('page') + 1
-            }))}
+            })))}
                     disabled={page >= 500}
             >
                 <FontAwesomeIcon

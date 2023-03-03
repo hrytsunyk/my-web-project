@@ -11,14 +11,18 @@ export * from './GenreBadge/GenreBadgeIcon';
 export * from './GenreBadge/GenreBadges';
 export * from './MovieInfo/MovieInfo';
 export * from './SearchingListCard/SearchingListCards';
+export * from './SimilarGenresListCard/SimilarGenresListCard';
+export * from './SearchingList/SearchingList';
 
 
 
 export * from './Logo/Logo.module.css';
 export * from './MoviesList/MoviesList.module.css';
+export * from './SearchingList/SearchingList.module.css';
 export * from './PosterPreview/PosterPreview.module.css';
 export * from './Header/Header.module.css';
 export * from './MoviesListCard/MoviesListCard.module.css';
+export * from './SimilarGenresListCard/SimilarGenresListCard.module.css';
 export * from './SearchingList/SearchingList.module.css';
 export * from './SearchForm/Search.module.css';
 export * from './GenreBadge/GenreBadgeIcon.module.css';

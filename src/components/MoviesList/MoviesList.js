@@ -1,4 +1,3 @@
-import React from 'react';
 import {useSelector} from "react-redux";
 
 
@@ -13,7 +12,6 @@ const MoviesList = () => {
 
     const {movies, loading} = useSelector(state => state.movies);
     const {searchResult} = useSelector(state => state.search)
-
 
 
     return (

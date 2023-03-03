@@ -17,10 +17,9 @@ const SearchForm = () => {
     const dispatch1 = useDispatch();
     const navigate = useNavigate();
 
-    const [query, setQuery] = useSearchParams({page:'1'});
+    const [query, setQuery] = useSearchParams({page: '1'});
 
     const searchParams = query.get('name');
-
 
     useEffect(() => {
         dispatch1(searchActions.getSearch({searchParams}))
@@ -31,27 +30,28 @@ const SearchForm = () => {
         const {name} = inputData;
 
         if (name !== '') {
-        setQuery(name)
-        navigate(`search/movie?name=${name}`)
-        reset()
+            setQuery(name)
+            navigate(`search/movie?name=${name}`)
+            reset()
         }
     }
+
 
     return (
 
 
-            <form className={css.search}
-                  onSubmit={handleSubmit(searchMovie)}>
+        <form className={css.search}
+              onSubmit={handleSubmit(searchMovie)}>
 
-                <TextField
-                    id="outlined-basic"
-                    variant="standard"
-                    fullWidth
-                    label="Search"
-                    placeholder='Search'
-                    {...register('name')}
-                />
-            </form>
+            <TextField
+                id="outlined-basic"
+                variant="standard"
+                fullWidth
+                label="Search"
+                placeholder='Search'
+                {...register('name')}
+            />
+        </form>
 
     );
 

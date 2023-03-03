@@ -11,6 +11,10 @@ const MoviesListCard = ({movie}) => {
 
     const movieId = id.toString();
 
+    const reload = () => {
+        window.location.reload(false)
+    }
+
 
     return (
         <NavLink to={`/movie/${movieId}`}>
