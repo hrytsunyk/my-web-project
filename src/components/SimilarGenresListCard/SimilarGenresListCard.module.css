@@ -1,0 +1,6 @@
+.MoviesListCard {
+    width: 250px;
+    height: 350px;
+    margin: 30px;
+    transition: 500ms;
+}
