@@ -26,9 +26,6 @@ const MovieInfo = () => {
 
     }, [dispatch,movieId])
 
-    const reload = () => {
-        window.location.reload(false)
-    }
 
     const genres = [];
     const countries = [];
