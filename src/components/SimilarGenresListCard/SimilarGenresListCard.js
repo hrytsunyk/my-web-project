@@ -7,7 +7,6 @@ const SimilarGenresListCard = ({movie}) => {
     
     let {id,poster_path, original_title, vote_average} = movie;
 
-    console.log(poster_path);
 
     return (
         <div className={css.MoviesListCard}>

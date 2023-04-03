@@ -14,7 +14,7 @@ const GenreBadgeIcon = ({genre}) => {
     const dispatch = useDispatch();
 
     useEffect(()=>{
-        dispatch(similarActions.getSimilar({}))
+        dispatch(similarActions.getSimilar())
     },[dispatch])
 
 
